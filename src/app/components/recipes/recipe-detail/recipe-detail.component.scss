@@ -1,0 +1,37 @@
+.id-badge{
+  color: #fff;
+  font-size: 14px;
+  padding: 2px 10px;
+  border-radius: 2px;
+}
+
+.title{
+  font-size: 27px;
+  margin: 0 0 10px 0;
+}
+
+.big-amount,
+.favourite{
+  display: flex;
+  align-items: center;
+
+  .label{
+    width: 200px;
+
+  }
+
+
+  label{
+    color: #000
+  }
+
+  .switch label input[type=checkbox]:checked+.lever:after{
+    background: #039be5;
+  }
+
+  .switch label input[type=checkbox]:checked+.lever{
+    background: lighten(#039be5,30%);
+  }
+
+
+}

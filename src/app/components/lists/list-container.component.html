@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col s6">
+        <app-list [list]="ingredients"
+                  [listName]="'ingredients'"
+                  (saved)="saveIngredient($event)"
+                  (deleted)="deleteIngredient($event)">
+        </app-list>
+    </div>
+    <div class="col s6">
+        <app-list [list]="cookingMethods"
+                  [listName]="'cooking methods'"
+                  (saved)="saveCookingMethod($event)"
+                  (deleted)="deleteCookingMethod($event)"></app-list>
+    </div>
+  </div>
+</div>

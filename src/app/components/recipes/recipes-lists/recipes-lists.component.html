@@ -1,0 +1,11 @@
+<div class="list-item" *ngFor="let recipe of recipes; index as i">
+  <div class="valign-wrapper item" (click)="selected.emit(recipe)">
+    <span class="number">{{i+1}}</span>
+    <span class="black-text recipes-title">
+            {{recipe.name}}
+          </span>
+    <i class="material-icons icon" (click)="deleted.emit(recipe)">highlight_off</i>
+  </div>
+  <div class="divider"></div>
+</div>
+

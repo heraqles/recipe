@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col s5">
+
+      <div class="card-panel recipe-lists grey lighten-5 z-depth-1">
+
+        <app-recpies-lists [recipes]="recipes"
+                           (selected)="selectRecipe($event)"
+                           (deleted)="deleteRecipe($event)">
+        </app-recpies-lists>
+
+      </div>
+    </div>
+    <div class="col s7">
+      <app-recipe-detail [selectedRecipe]="selectedRecipe">
+      </app-recipe-detail>
+    </div>
+  </div>
+  <div class="add">
+    <a class="btn-floating btn-medium waves-effect waves-light blue" [routerLink]="'/new-recipe'"><i
+      class="material-icons">add</i></a>
+  </div>
+</div>

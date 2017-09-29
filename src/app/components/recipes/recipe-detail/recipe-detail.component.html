@@ -1,0 +1,54 @@
+<div class="card-panel recipe-detail grey lighten-5 z-depth-1">
+  <p class="title">{{selectedRecipe?.name}} recipe</p>
+  <div class="recipe-id">
+    <span class="id-badge light-blue darken-1">RECIPE ID: {{selectedRecipe?.id}}</span>
+  </div>
+  <div class="big-amount">
+    <p class="label">Big Amount</p>
+    <div class="switch">
+      <label>
+        No
+        <input type="checkbox" [checked]="selectedRecipe?.big_amount" disabled>
+        <span class="lever"></span>
+        Yes
+      </label>
+    </div>
+  </div>
+
+  <div class="favourite">
+    <p class="label">Favourite recipes</p>
+    <div class="switch">
+      <label>
+        No
+        <input type="checkbox" [checked]="selectedRecipe?.favourite" disabled>
+        <span class="lever"></span>
+        Yes
+      </label>
+    </div>
+  </div>
+  <div class="ingredients">
+    <p class="ingredients-title">
+      Ingredients:
+    </p>
+    <div class="ingredients">
+      <table class="striped responsive-table">
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Amount</th>
+          <th>Unit</th>
+          <th>Cooking Method</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let ingredient of selectedRecipe?.ingredients">
+          <td>{{ingredient.name}}</td>
+          <td>{{ingredient.amount}}</td>
+          <td>{{ingredient.unit}}</td>
+          <td>{{ingredient.cookingMethod}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

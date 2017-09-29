@@ -1,0 +1,147 @@
+{
+  "recipes": [
+    {
+      "id": 1,
+      "name": "Tomato soup",
+      "big_amount": false,
+      "favourite": false,
+      "ingredients": [
+        {
+          "name": "sugar",
+          "amount": "100",
+          "unit": "g",
+          "cookingMethod": "grill"
+        },
+        {
+          "name": "milk",
+          "amount": "250",
+          "unit": "ml",
+          "cookingMethod": "boiling"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Pizza - Capriciossa",
+      "big_amount": false,
+      "favourite": true,
+      "ingredients": [
+        {
+          "name": "sugar",
+          "amount": "100",
+          "unit": "g",
+          "cookingMethod": "grill"
+        },
+        {
+          "name": "milk",
+          "amount": "250",
+          "unit": "ml",
+          "cookingMethod": "boiling"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Carmel Brownie pie",
+      "big_amount": true,
+      "favourite": true,
+      "ingredients": [
+        {
+          "name": "sugar",
+          "amount": "100",
+          "unit": "g",
+          "cookingMethod": "boiling"
+        },
+        {
+          "name": "milk",
+          "amount": "250",
+          "unit": "ml",
+          "cookingMethod": "searing"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Pancakes",
+      "big_amount": false,
+      "favourite": true,
+      "ingredients": [
+        {
+          "name": "sugar",
+          "amount": "100",
+          "unit": "g",
+          "cookingMethod": "boiling"
+        },
+        {
+          "name": "milk",
+          "amount": "250",
+          "unit": "ml",
+          "cookingMethod": "grill"
+        }
+      ]
+    },
+    {
+      "id": 583,
+      "name": "Chicken salate",
+      "big_amount": true,
+      "ingredients": [
+        {
+          "name": "salt",
+          "amount": "300",
+          "unit": "ml",
+          "cookingMethod": "baking"
+        },
+        {
+          "name": "mashrooms",
+          "amount": "150",
+          "unit": "ml",
+          "cookingMethod": "boiling"
+        }
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "id": 1,
+      "name": "sugar"
+    },
+    {
+      "id": 2,
+      "name": "milk"
+    },
+    {
+      "id": 3,
+      "name": "flour"
+    },
+    {
+      "id": 4,
+      "name": "salt"
+    },
+    {
+      "id": 5,
+      "name": "mashrooms"
+    }
+  ],
+  "cooking-methods": [
+    {
+      "id": 2,
+      "name": "baking"
+    },
+    {
+      "id": 3,
+      "name": "grill"
+    },
+    {
+      "id": 4,
+      "name": "pan-fry"
+    },
+    {
+      "id": 5,
+      "name": "searing"
+    },
+    {
+      "name": "boiling",
+      "id": 59
+    }
+  ]
+}
