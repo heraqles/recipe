@@ -5,5 +5,5 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Start application
 1 npm install
 
-2 Use `npm start` that command runs server and app
+2 Use `npm start` insteadof `ng serve`
 
