@@ -1,14 +1,14 @@
 <div class="card-panel recipe-detail grey lighten-5 z-depth-1">
-  <p class="title">{{selectedRecipe?.name}} recipe</p>
+  <p class="title">{{recipeDetail?.name}} recipe</p>
   <div class="recipe-id">
-    <span class="id-badge light-blue darken-1">RECIPE ID: {{selectedRecipe?.id}}</span>
+    <span class="id-badge light-blue darken-1">RECIPE ID: {{recipeDetail?.id}}</span>
   </div>
   <div class="big-amount">
     <p class="label">Big Amount</p>
     <div class="switch">
       <label>
         No
-        <input type="checkbox" [checked]="selectedRecipe?.big_amount" disabled>
+        <input type="checkbox" [checked]="recipeDetail?.big_amount" disabled>
         <span class="lever"></span>
         Yes
       </label>
@@ -20,7 +20,7 @@
     <div class="switch">
       <label>
         No
-        <input type="checkbox" [checked]="selectedRecipe?.favourite" disabled>
+        <input type="checkbox" [checked]="recipeDetail?.favourite" disabled>
         <span class="lever"></span>
         Yes
       </label>
@@ -50,7 +50,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let ingredient of selectedRecipe?.ingredients">
+        <tr *ngFor="let ingredient of recipeDetail?.ingredients">
           <td>{{ingredient.name}}</td>
           <td>{{ingredient.amount}}</td>
           <td>{{ingredient.unit}}</td>
