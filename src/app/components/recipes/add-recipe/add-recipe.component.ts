@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {RecipesService} from '../../../services/recipes/recipes.service';
+import {IngredientService} from '../../../services/recipes/ingredient.service';
 import {Router} from '@angular/router';
 import {Ingredients} from '../../../services/recipes/ingredients.model';
 
@@ -15,6 +16,7 @@ export class AddRecipeComponent implements OnInit {
   recipes: any;
 
   constructor(private recipesService: RecipesService,
+              private ingredientService: IngredientService,
               private router: Router) {
     this.ingredients = [];
     this.newRecipe = {};
@@ -29,12 +31,15 @@ export class AddRecipeComponent implements OnInit {
 
   addIngredient(ingredient) {
     this.ingredients.push(ingredient);
+    console.log(this.ingredients);
   }
 
   saveNewRecipe() {
-    this.newRecipe['ingredients'] = this.ingredients;
+    // this.newRecipe['ingredients'] = this.ingredients;
     this.recipesService.createRecipe(this.newRecipe).subscribe(() => {
-      console.log('Adding new recipes');
+      this.ingredientService.createIngredients(this.newRecipe['id'], this.ingredients).subscribe(() => {
+        console.log('Adding ingredients');
+      });
       this.router.navigate(['']);
     });
   }

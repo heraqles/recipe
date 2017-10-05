@@ -29,7 +29,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: '',
+    redirectTo: 'recipe/details/1',
     pathMatch: 'full'
   }
 
