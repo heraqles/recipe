@@ -9,6 +9,10 @@
     cursor: pointer;
   }
 
+  &.active{
+    background: #eee;
+  }
+
 }
 
 .icon{
@@ -40,3 +44,13 @@
   color: #fff;
 }
 
+.add {
+  position: absolute;
+  bottom: -50px;
+  transition: all 0.3s;
+  .btn-floating {
+    &:hover {
+      transform: scale(0.8);
+    }
+  }
+}

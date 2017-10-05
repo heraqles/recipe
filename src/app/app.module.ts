@@ -16,6 +16,8 @@ import { ListContainerComponent } from './components/lists/list-container.compon
 import { ListComponent } from './components/lists/list/list.component';
 import { CapitalizeFirstPipe } from './pipes/capitalize.pipe';
 import { AddIngredientsComponent } from './components/recipes/add-ingredients/add-ingredients.component';
+import { SearchPipe} from './pipes/search.pipe';
+import { SearchInputComponent } from './components/search-input/search-input.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { AddIngredientsComponent } from './components/recipes/add-ingredients/ad
     ListContainerComponent,
     ListComponent,
     CapitalizeFirstPipe,
-    AddIngredientsComponent
+    SearchPipe,
+    AddIngredientsComponent,
+    SearchInputComponent
   ],
   imports: [
     BrowserModule,

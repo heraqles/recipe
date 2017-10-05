@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {Recipe} from '../../../services/recipes/recipe.model';
+import {Ingredients} from '../../../services/recipes/ingredients.model';
 
 @Component({
   selector: 'app-recipe-detail',
@@ -9,5 +10,15 @@ import {Recipe} from '../../../services/recipes/recipe.model';
 export class RecipeDetailComponent {
 
   @Input() selectedRecipe: Recipe;
+  toggle: boolean;
+  ingredients: Ingredients[];
+
+  constructor() {
+    this.toggle = true;
+  }
+
+  toggleAction() {
+    this.toggle = !this.toggle;
+  }
 
 }

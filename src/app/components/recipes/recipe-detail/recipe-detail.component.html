@@ -27,6 +27,15 @@
     </div>
   </div>
   <div class="ingredients">
+    <div class="add" (click)="toggleAction()">
+      <a class="btn-floating btn-medium waves-effect waves-light blue"><i
+      class="material-icons">add</i></a><span class="button-desc">Add another ingredient</span>
+    </div>
+    <div class="add-another" *ngIf="!toggle">
+      <app-add-ingredients
+        (add)="addIngredient($event)">
+      </app-add-ingredients>
+    </div>
     <p class="ingredients-title">
       Ingredients:
     </p>

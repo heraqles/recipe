@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {RecipesService} from '../../../services/recipes/recipes.service';
-import {Router, ActivatedRoute} from '@angular/router';
+import {Router} from '@angular/router';
+import {Ingredients} from '../../../services/recipes/ingredients.model';
+
 @Component({
   selector: 'app-add-recipes',
   templateUrl: './add-recipe.component.html',
@@ -8,14 +10,14 @@ import {Router, ActivatedRoute} from '@angular/router';
 })
 export class AddRecipeComponent implements OnInit {
 
-  newRecipe = {};
-  ingredients = [];
-
+  newRecipe: Object;
+  ingredients: Ingredients[];
   recipes: any;
 
   constructor(private recipesService: RecipesService,
-              private router: Router,
-              private route: ActivatedRoute) {
+              private router: Router) {
+    this.ingredients = [];
+    this.newRecipe = {};
   }
 
   ngOnInit() {

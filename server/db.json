@@ -98,6 +98,51 @@
           "cookingMethod": "boiling"
         }
       ]
+    },
+    {
+      "id": 740,
+      "name": "Test",
+      "big_amount": true,
+      "ingredients": [
+        {
+          "name": "flour",
+          "amount": "100",
+          "unit": "ml",
+          "cookingMethod": "boiling"
+        },
+        {
+          "name": "salt",
+          "amount": "300",
+          "unit": "ml",
+          "cookingMethod": "boiling"
+        },
+        {
+          "name": "sugar",
+          "amount": "100",
+          "unit": "ml",
+          "cookingMethod": "grill"
+        }
+      ]
+    },
+    {
+      "id": 575,
+      "name": "Fries with meet",
+      "big_amount": false,
+      "favourite": true,
+      "ingredients": [
+        {
+          "name": "sugar",
+          "amount": "150",
+          "unit": "ml",
+          "cookingMethod": "grill"
+        },
+        {
+          "name": "milk",
+          "amount": "50",
+          "unit": "ml",
+          "cookingMethod": "baking"
+        }
+      ]
     }
   ],
   "ingredients": [
@@ -142,6 +187,10 @@
     {
       "name": "boiling",
       "id": 59
+    },
+    {
+      "name": "gill 2",
+      "id": 875
     }
   ]
 }

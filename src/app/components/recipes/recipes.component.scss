@@ -1,17 +1,10 @@
 .recipe-lists {
   padding: 0px;
+  position: relative;
 }
 
 .recipe-id {
   display: block;
 }
 
-.add {
-  margin-top: -20px;
-  transition: all 0.3s;
-  .btn-floating {
-    &:hover {
-      transform: scale(0.8);
-    }
-  }
-}
+
