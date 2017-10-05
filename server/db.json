@@ -5,18 +5,9 @@
       "name": "Tomato soup",
       "big_amount": false,
       "favourite": false,
-      "ingredients": [
+      "ingredient": [
         {
-          "name": "sugar",
-          "amount": "100",
-          "unit": "g",
-          "cookingMethod": "grill"
-        },
-        {
-          "name": "milk",
-          "amount": "250",
-          "unit": "ml",
-          "cookingMethod": "boiling"
+          "name": "water"
         }
       ]
     },
@@ -25,38 +16,26 @@
       "name": "Pizza - Capriciossa",
       "big_amount": false,
       "favourite": true,
-      "ingredients": [
+      "ingredient": [
         {
-          "name": "sugar",
-          "amount": "100",
-          "unit": "g",
-          "cookingMethod": "grill"
+          "name": "salt"
         },
         {
-          "name": "milk",
-          "amount": "250",
-          "unit": "ml",
-          "cookingMethod": "boiling"
+          "name": "flour"
+        },
+        {
+          "name": "water"
         }
       ]
     },
     {
       "id": 3,
-      "name": "Carmel Brownie pie",
+      "name": "Carmel Brownie pie 2",
       "big_amount": true,
       "favourite": true,
-      "ingredients": [
+      "ingredient": [
         {
-          "name": "sugar",
-          "amount": "100",
-          "unit": "g",
-          "cookingMethod": "boiling"
-        },
-        {
-          "name": "milk",
-          "amount": "250",
-          "unit": "ml",
-          "cookingMethod": "searing"
+          "name": "flour"
         }
       ]
     },
@@ -64,43 +43,183 @@
       "id": 4,
       "name": "Pancakes",
       "big_amount": false,
-      "favourite": true,
-      "ingredients": [
+      "favourite": false,
+      "ingredient": [
         {
-          "name": "sugar",
-          "amount": "100",
-          "unit": "g",
-          "cookingMethod": "boiling"
+          "name": "salt"
         },
         {
-          "name": "milk",
-          "amount": "250",
-          "unit": "ml",
-          "cookingMethod": "grill"
+          "name": "mashrooms"
+        },
+        {
+          "name": "tomato"
+        },
+        {
+          "name": "onion"
+        },
+        {
+          "name": "water"
         }
       ]
     },
     {
       "id": 583,
-      "name": "Chicken salate",
-      "big_amount": true,
-      "ingredients": [
+      "name": "Chicken salate 2",
+      "big_amount": false,
+      "favourite": true,
+      "ingredient": [
         {
-          "name": "salt",
-          "amount": "300",
-          "unit": "ml",
-          "cookingMethod": "baking"
+          "name": "salt"
         },
         {
-          "name": "mashrooms",
-          "amount": "150",
-          "unit": "ml",
-          "cookingMethod": "boiling"
+          "name": "mashrooms"
+        },
+        {
+          "name": "tomato"
+        }
+      ]
+    },
+    {
+      "id": 740,
+      "name": "Test",
+      "big_amount": true,
+      "favourite": false,
+      "ingredient": [
+        {
+          "name": "salt"
+        },
+        {
+          "name": "sugar"
+        },
+        {
+          "name": "potato"
         }
       ]
     }
   ],
   "ingredients": [
+    {
+      "id": "2",
+      "recipeId": "583",
+      "name": "salt",
+      "amount": "300",
+      "unit": "ml",
+      "cookingMethod": "baking"
+    },
+    {
+      "id": "3",
+      "recipeId": "583",
+      "name": "mashrooms",
+      "amount": "150",
+      "unit": "ml",
+      "cookingMethod": "boiling"
+    },
+    {
+      "id": "4",
+      "recipeId": "4",
+      "name": "sugar",
+      "amount": "100",
+      "unit": "g",
+      "cookingMethod": "boiling"
+    },
+    {
+      "id": "5",
+      "recipeId": "4",
+      "name": "milk",
+      "amount": "250",
+      "unit": "ml",
+      "cookingMethod": "grill"
+    },
+    {
+      "id": "6",
+      "recipeId": "740",
+      "name": "sugar",
+      "amount": "150",
+      "unit": "ml",
+      "cookingMethod": "grill"
+    },
+    {
+      "id": "7",
+      "recipeId": "740",
+      "name": "milk",
+      "amount": "50",
+      "unit": "ml",
+      "cookingMethod": "baking"
+    },
+    {
+      "id": "8",
+      "recipeId": "1",
+      "name": "sugar",
+      "amount": "100",
+      "unit": "g",
+      "cookingMethod": "grill"
+    },
+    {
+      "id": "9",
+      "recipeId": "1",
+      "name": "milk",
+      "amount": "250",
+      "unit": "ml",
+      "cookingMethod": "boiling"
+    },
+    {
+      "id": "10",
+      "recipeId": "2",
+      "name": "sugar",
+      "amount": "100",
+      "unit": "g",
+      "cookingMethod": "grill"
+    },
+    {
+      "id": "11",
+      "recipeId": "2",
+      "name": "milk",
+      "amount": "250",
+      "unit": "ml",
+      "cookingMethod": "boiling"
+    },
+    {
+      "id": "12",
+      "recipeId": "3",
+      "name": "sugar",
+      "amount": "100",
+      "unit": "g",
+      "cookingMethod": "boiling"
+    },
+    {
+      "id": "13",
+      "recipeId": "3",
+      "name": "milk",
+      "amount": "250",
+      "unit": "ml",
+      "cookingMethod": "searing"
+    },
+    {
+      "name": "milk",
+      "amount": "25",
+      "unit": "ml",
+      "cookingMethod": "gill 2",
+      "recipeId": "4",
+      "id": "r1wFCYQ2Z"
+    },
+    {
+      "name": "salt",
+      "unit": "ml",
+      "amount": "50",
+      "cookingMethod": "grill",
+      "recipeId": "583",
+      "id": "rkcuOcXhW"
+    },
+    {
+      "name": "salt",
+      "amount": "400",
+      "unit": "g",
+      "cookingMethod": "pan-fry",
+      "recipeId": "4",
+      "id": "rJ4bTiX3W"
+    }
+  ],
+  "ingredient-list": [
     {
       "id": 1,
       "name": "sugar"
@@ -120,9 +239,21 @@
     {
       "id": 5,
       "name": "mashrooms"
+    },
+    {
+      "name": "tomato",
+      "id": 633
+    },
+    {
+      "name": "water",
+      "id": 288
+    },
+    {
+      "name": "onion",
+      "id": 832
     }
   ],
-  "cooking-methods": [
+  "cooking-methods-list": [
     {
       "id": 2,
       "name": "baking"
@@ -142,6 +273,10 @@
     {
       "name": "boiling",
       "id": 59
+    },
+    {
+      "name": "gill 2",
+      "id": 875
     }
   ]
 }

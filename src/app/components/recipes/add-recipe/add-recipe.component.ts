@@ -1,6 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {RecipesService} from '../../../services/recipes/recipes.service';
-import {Router, ActivatedRoute} from '@angular/router';
+import {IngredientService} from '../../../services/recipes/ingredient.service';
+import {Router} from '@angular/router';
+import {Ingredients} from '../../../services/recipes/ingredients.model';
+
 @Component({
   selector: 'app-add-recipes',
   templateUrl: './add-recipe.component.html',
@@ -8,14 +11,15 @@ import {Router, ActivatedRoute} from '@angular/router';
 })
 export class AddRecipeComponent implements OnInit {
 
-  newRecipe = {};
-  ingredients = [];
-
+  newRecipe: Object;
+  ingredients: Ingredients[];
   recipes: any;
 
   constructor(private recipesService: RecipesService,
-              private router: Router,
-              private route: ActivatedRoute) {
+              private ingredientService: IngredientService,
+              private router: Router) {
+    this.ingredients = [];
+    this.newRecipe = {};
   }
 
   ngOnInit() {
@@ -26,13 +30,17 @@ export class AddRecipeComponent implements OnInit {
   }
 
   addIngredient(ingredient) {
+    ingredient['recipeId'] = this.newRecipe['id'];
+    this.ingredientService.createIngredients(this.newRecipe['id'], ingredient).subscribe(() => {
+      console.log('Adding ingredients');
+    });
     this.ingredients.push(ingredient);
   }
 
   saveNewRecipe() {
-    this.newRecipe['ingredients'] = this.ingredients;
+    // this.newRecipe['ingredients'] = this.ingredients;
     this.recipesService.createRecipe(this.newRecipe).subscribe(() => {
-      console.log('Adding new recipes');
+      console.log('Adding new recipe');
       this.router.navigate(['']);
     });
   }

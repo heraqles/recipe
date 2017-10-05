@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
 import {Injectable} from '@angular/core';
 import {Recipe} from './recipe.model';
 
@@ -25,6 +25,10 @@ export class RecipesService {
 
   createRecipe(recipe: any) {
     return this.http.post(`${BASE_URL}`, recipe);
+  }
+
+  updateRecipe(recipe: any) {
+    return this.http.patch(`${BASE_URL}/${recipe.id}`, recipe);
   }
 
 }

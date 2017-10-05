@@ -9,28 +9,28 @@ export class ListsService {
   constructor(private http: HttpClient) {
   }
   loadIngredientsList() {
-    return this.http.get<List>(`${BASE_URL}/ingredients`);
+    return this.http.get<List>(`${BASE_URL}/ingredient-list`);
   }
 
   deleteIngredients(ingredients: List) {
-    return this.http.delete(`${BASE_URL}/ingredients/${ingredients.id}`);
+    return this.http.delete(`${BASE_URL}/ingredient-list/${ingredients.id}`);
   }
 
   createIngredient(ingredient: List) {
-    return this.http.post(`${BASE_URL}/ingredients`, ingredient);
+    return this.http.post(`${BASE_URL}/ingredient-list`, ingredient);
   }
 
 
   loadCookingMethods() {
-    return this.http.get<List>(`${BASE_URL}/cooking-methods`);
+    return this.http.get<List>(`${BASE_URL}/cooking-methods-list`);
   }
 
   deleteCookingMethod(cookingMethod: List) {
-    return this.http.delete(`${BASE_URL}/cooking-methods/${cookingMethod.id}`);
+    return this.http.delete(`${BASE_URL}/cooking-methods-list/${cookingMethod.id}`);
   }
 
   createCookingMethod(cookingMethod: List) {
-    return this.http.post(`${BASE_URL}/cooking-methods`, cookingMethod);
+    return this.http.post(`${BASE_URL}/cooking-methods-list`, cookingMethod);
   }
 
 

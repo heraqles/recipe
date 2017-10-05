@@ -12,12 +12,8 @@
       </div>
     </div>
     <div class="col s7">
-      <app-recipe-detail [selectedRecipe]="selectedRecipe">
-      </app-recipe-detail>
+      <router-outlet></router-outlet>
     </div>
   </div>
-  <div class="add">
-    <a class="btn-floating btn-medium waves-effect waves-light blue" [routerLink]="'/new-recipe'"><i
-      class="material-icons">add</i></a>
-  </div>
+
 </div>

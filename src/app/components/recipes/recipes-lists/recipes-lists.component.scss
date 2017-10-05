@@ -1,34 +1,28 @@
-.item{
+.item {
   padding: 20px 10px;
   display: flex;
   justify-content: space-between;
   transition: all 0.5s;
-
-  &:hover{
-    background: #eee;
-    cursor: pointer;
-  }
-
 }
 
-.icon{
+.icon {
   color: #039be5;
   transition: all 0.3s;
 
-  &:hover{
+  &:hover {
     transform: scale(1.2);
   }
 
 }
 
-.recipes-title{
+.recipes-title {
   display: block;
   text-align: left;
   width: 280px;
   margin-left: 20px;
 }
 
-.number{
+.number {
   display: block;
   line-height: 30px;
   margin-right: 10px;
@@ -40,3 +34,25 @@
   color: #fff;
 }
 
+.add {
+  position: absolute;
+  bottom: -50px;
+  transition: all 0.3s;
+  .btn-floating {
+    &:hover {
+      transform: scale(0.8);
+    }
+  }
+}
+
+.list-nav {
+  display: block;
+  &:hover {
+    background: #eee;
+    cursor: pointer;
+  }
+
+  &.active {
+    background: #eee;
+  }
+}

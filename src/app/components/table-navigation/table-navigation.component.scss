@@ -1,0 +1,17 @@
+.advance-navigate{
+  thead tr{
+    font-size: 14px;
+  }
+  thead th{
+    cursor: pointer;
+  }
+  tr{
+    font-size: 12px;
+
+    &:hover{
+      background: #eee;
+      cursor: pointer;
+    }
+
+  }
+}

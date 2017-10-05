@@ -1,14 +1,19 @@
 <div class="card-panel recipe-detail grey lighten-5 z-depth-1">
-  <p class="title">{{selectedRecipe?.name}} recipe</p>
+  <p class="title" *ngIf="!editForm">{{recipeDetail?.name}} recipe</p>
+  <div class="input-field" *ngIf="editForm">
+    <input placeholder="Name of recipe" autocomplete="off" [(ngModel)]="recipeDetail.name" id="name" type="text"
+           class="validate">
+  </div>
   <div class="recipe-id">
-    <span class="id-badge light-blue darken-1">RECIPE ID: {{selectedRecipe?.id}}</span>
+    <span class="id-badge light-blue darken-1">RECIPE ID: {{recipeDetail?.id}}</span>
   </div>
   <div class="big-amount">
     <p class="label">Big Amount</p>
     <div class="switch">
       <label>
         No
-        <input type="checkbox" [checked]="selectedRecipe?.big_amount" disabled>
+        <input type="checkbox" [checked]="recipeDetail?.big_amount" *ngIf="!editForm" disabled>
+        <input type="checkbox" [(ngModel)]="recipeDetail.big_amount" *ngIf="editForm">
         <span class="lever"></span>
         Yes
       </label>
@@ -20,13 +25,19 @@
     <div class="switch">
       <label>
         No
-        <input type="checkbox" [checked]="selectedRecipe?.favourite" disabled>
+        <input type="checkbox" [checked]="recipeDetail?.favourite" *ngIf="!editForm" disabled>
+        <input type="checkbox" [(ngModel)]="recipeDetail.favourite" *ngIf="editForm">
         <span class="lever"></span>
         Yes
       </label>
     </div>
   </div>
   <div class="ingredients">
+    <div class="add-another" *ngIf="editForm">
+      <app-add-ingredients
+        (add)="addIngredient($event, recipeDetail.id)">
+      </app-add-ingredients>
+    </div>
     <p class="ingredients-title">
       Ingredients:
     </p>
@@ -41,7 +52,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let ingredient of selectedRecipe?.ingredients">
+        <tr *ngFor="let ingredient of ingredients">
           <td>{{ingredient.name}}</td>
           <td>{{ingredient.amount}}</td>
           <td>{{ingredient.unit}}</td>
@@ -51,4 +62,13 @@
       </table>
     </div>
   </div>
+  <div class="edit" (click)="editRecipe()" *ngIf="!editForm">
+    <a class="btn-floating btn-medium waves-effect waves-light blue"><i
+      class="material-icons">edit</i></a><span class="button-desc">Edit recipe</span>
+  </div>
+  <div class="edit" (click)="saveRecipe()" *ngIf="editForm">
+    <a class="btn-floating btn-medium waves-effect waves-light blue"><i
+      class="material-icons">save</i></a><span class="button-desc">Save recipe</span>
+  </div>
 </div>
+

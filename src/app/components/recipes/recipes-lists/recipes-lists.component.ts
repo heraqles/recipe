@@ -1,5 +1,5 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Recipe } from '../../../services/recipes/recipe.model';
+import {Component, Input, Output, EventEmitter} from '@angular/core';
+import {Recipe} from '../../../services/recipes/recipe.model';
 @Component({
   selector: 'app-recpies-lists',
   templateUrl: './recipes-lists.component.html',
@@ -10,7 +10,10 @@ export class RecipesListsComponent {
   @Input() recipes: Recipe[];
   @Output() selected = new EventEmitter();
   @Output() deleted = new EventEmitter();
+  term: string;
 
-
+  filterList(term: string) {
+    this.term = term;
+  }
 
 }
