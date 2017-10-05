@@ -30,16 +30,17 @@ export class AddRecipeComponent implements OnInit {
   }
 
   addIngredient(ingredient) {
+    ingredient['recipeId'] = this.newRecipe['id'];
+    this.ingredientService.createIngredients(this.newRecipe['id'], ingredient).subscribe(() => {
+      console.log('Adding ingredients');
+    });
     this.ingredients.push(ingredient);
-    console.log(this.ingredients);
   }
 
   saveNewRecipe() {
     // this.newRecipe['ingredients'] = this.ingredients;
     this.recipesService.createRecipe(this.newRecipe).subscribe(() => {
-      this.ingredientService.createIngredients(this.newRecipe['id'], this.ingredients).subscribe(() => {
-        console.log('Adding ingredients');
-      });
+      console.log('Adding new recipe');
       this.router.navigate(['']);
     });
   }

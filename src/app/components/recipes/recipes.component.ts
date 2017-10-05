@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {RecipesService} from '../../services/recipes/recipes.service';
 import {Recipe} from '../../services/recipes/recipe.model';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-recepies',
   templateUrl: './recipes.component.html',
@@ -9,26 +10,23 @@ import {Recipe} from '../../services/recipes/recipe.model';
 export class RecipesComponent implements OnInit {
 
   recipes: any;
-  selectedRecipe: Recipe;
+  ingredients: any;
 
-  constructor(private recipesService: RecipesService) {
+  constructor(private recipesService: RecipesService,
+              private router: Router) {
   }
 
   ngOnInit() {
     this.recipesService.loadRecipes().subscribe(recipes => {
       this.recipes = recipes;
-      this.selectRecipe(this.recipes[0]);
     });
-  }
-
-  selectRecipe(recipe: Recipe) {
-    this.selectedRecipe = recipe;
   }
 
   deleteRecipe(recipe: Recipe) {
     if (this.confirmDeleting(recipe.name)) {
       this.recipesService.deleteRecipe(recipe).subscribe(() => {
         this.recipes.splice(this.recipes.indexOf(recipe), 1);
+        this.router.navigate(['recipes/details/1']);
       });
     }
     return;
@@ -37,5 +35,7 @@ export class RecipesComponent implements OnInit {
   confirmDeleting(name: string) {
     return confirm(`Are You sure you want to delete ${name} recepies`);
   }
+
+
 
 }

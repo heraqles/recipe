@@ -4,47 +4,97 @@
       "id": 1,
       "name": "Tomato soup",
       "big_amount": false,
-      "favourite": false
+      "favourite": false,
+      "ingredient": [
+        {
+          "name": "water"
+        }
+      ]
     },
     {
       "id": 2,
       "name": "Pizza - Capriciossa",
       "big_amount": false,
-      "favourite": true
+      "favourite": true,
+      "ingredient": [
+        {
+          "name": "salt"
+        },
+        {
+          "name": "flour"
+        },
+        {
+          "name": "water"
+        }
+      ]
     },
     {
       "id": 3,
-      "name": "Carmel Brownie pie",
+      "name": "Carmel Brownie pie 2",
       "big_amount": true,
-      "favourite": true
+      "favourite": true,
+      "ingredient": [
+        {
+          "name": "flour"
+        }
+      ]
     },
     {
       "id": 4,
       "name": "Pancakes",
       "big_amount": false,
-      "favourite": true
+      "favourite": false,
+      "ingredient": [
+        {
+          "name": "salt"
+        },
+        {
+          "name": "mashrooms"
+        },
+        {
+          "name": "tomato"
+        },
+        {
+          "name": "onion"
+        },
+        {
+          "name": "water"
+        }
+      ]
     },
     {
       "id": 583,
-      "name": "Chicken salate",
-      "big_amount": true,
-      "favourite": true
+      "name": "Chicken salate 2",
+      "big_amount": false,
+      "favourite": true,
+      "ingredient": [
+        {
+          "name": "salt"
+        },
+        {
+          "name": "mashrooms"
+        },
+        {
+          "name": "tomato"
+        }
+      ]
     },
     {
       "id": 740,
       "name": "Test",
       "big_amount": true,
-      "favourite": false
-    },
-    {
-      "id": 575,
-      "name": "Fries with meet",
-      "big_amount": false,
-      "favourite": true
-    },
-    {
-      "id": 136,
-      "name": "Test 23"
+      "favourite": false,
+      "ingredient": [
+        {
+          "name": "salt"
+        },
+        {
+          "name": "sugar"
+        },
+        {
+          "name": "potato"
+        }
+      ]
     }
   ],
   "ingredients": [
@@ -144,20 +194,30 @@
       "unit": "ml",
       "cookingMethod": "searing"
     },
-    [
-      {
-        "name": "milk",
-        "amount": "50",
-        "unit": "g",
-        "cookingMethod": "grill"
-      },
-      {
-        "name": "flour",
-        "amount": "50",
-        "unit": "ml",
-        "cookingMethod": "pan-fry"
-      }
-    ]
+    {
+      "name": "milk",
+      "amount": "25",
+      "unit": "ml",
+      "cookingMethod": "gill 2",
+      "recipeId": "4",
+      "id": "r1wFCYQ2Z"
+    },
+    {
+      "name": "salt",
+      "unit": "ml",
+      "amount": "50",
+      "cookingMethod": "grill",
+      "recipeId": "583",
+      "id": "rkcuOcXhW"
+    },
+    {
+      "name": "salt",
+      "amount": "400",
+      "unit": "g",
+      "cookingMethod": "pan-fry",
+      "recipeId": "4",
+      "id": "rJ4bTiX3W"
+    }
   ],
   "ingredient-list": [
     {
@@ -179,6 +239,18 @@
     {
       "id": 5,
       "name": "mashrooms"
+    },
+    {
+      "name": "tomato",
+      "id": 633
+    },
+    {
+      "name": "water",
+      "id": 288
+    },
+    {
+      "name": "onion",
+      "id": 832
     }
   ],
   "cooking-methods-list": [

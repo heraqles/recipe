@@ -9,7 +9,9 @@ export class HeaderComponent {
 
   @Input() name: string;
   links = {
-    recipes: [''],
-    lists: ['/lists']
+    home: ['home'],
+    recipes: ['recipes/details/1'],
+    lists: ['/lists'],
+    navigation: ['/table-navigation']
   };
 }

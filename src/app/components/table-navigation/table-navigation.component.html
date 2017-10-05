@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col s12">
+      <div class="card-panel recipe-detail grey lighten-5 z-depth-1">
+        <input [(ngModel)]="term"
+               placeholder="filter by name or id">
+        <table class="bordered advance-navigate">
+          <thead>
+          <tr>
+            <th (click)="sort('id')">Id</th>
+            <th (click)="sort('name')">Name</th>
+            <th>Big Amount</th>
+            <th>Ingredients</th>
+          </tr>
+          </thead>
+          <tr *ngFor="let recipe of recipes | filter:term | orderBy:order:ascending" (click)="goTo(recipe.id)">
+            <td>{{recipe.id}}</td>
+            <td>{{recipe.name}}</td>
+            <td>{{recipe.big_amount}}</td>
+            <td><span class="ingredients" *ngFor="let ingrdient of recipe?.ingredient">{{ingrdient.name}}, </span></td>
+          </tr>
+          <tbody>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

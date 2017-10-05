@@ -1,5 +1,9 @@
 <div class="card-panel recipe-detail grey lighten-5 z-depth-1">
-  <p class="title">{{recipeDetail?.name}} recipe</p>
+  <p class="title" *ngIf="!editForm">{{recipeDetail?.name}} recipe</p>
+  <div class="input-field" *ngIf="editForm">
+    <input placeholder="Name of recipe" autocomplete="off" [(ngModel)]="recipeDetail.name" id="name" type="text"
+           class="validate">
+  </div>
   <div class="recipe-id">
     <span class="id-badge light-blue darken-1">RECIPE ID: {{recipeDetail?.id}}</span>
   </div>
@@ -8,7 +12,8 @@
     <div class="switch">
       <label>
         No
-        <input type="checkbox" [checked]="recipeDetail?.big_amount" disabled>
+        <input type="checkbox" [checked]="recipeDetail?.big_amount" *ngIf="!editForm" disabled>
+        <input type="checkbox" [(ngModel)]="recipeDetail.big_amount" *ngIf="editForm">
         <span class="lever"></span>
         Yes
       </label>
@@ -20,20 +25,17 @@
     <div class="switch">
       <label>
         No
-        <input type="checkbox" [checked]="recipeDetail?.favourite" disabled>
+        <input type="checkbox" [checked]="recipeDetail?.favourite" *ngIf="!editForm" disabled>
+        <input type="checkbox" [(ngModel)]="recipeDetail.favourite" *ngIf="editForm">
         <span class="lever"></span>
         Yes
       </label>
     </div>
   </div>
   <div class="ingredients">
-    <div class="add" (click)="toggleAction()">
-      <a class="btn-floating btn-medium waves-effect waves-light blue"><i
-      class="material-icons">add</i></a><span class="button-desc">Add another ingredient</span>
-    </div>
-    <div class="add-another" *ngIf="!toggle">
+    <div class="add-another" *ngIf="editForm">
       <app-add-ingredients
-        (add)="addIngredient($event)">
+        (add)="addIngredient($event, recipeDetail.id)">
       </app-add-ingredients>
     </div>
     <p class="ingredients-title">
@@ -60,4 +62,13 @@
       </table>
     </div>
   </div>
+  <div class="edit" (click)="editRecipe()" *ngIf="!editForm">
+    <a class="btn-floating btn-medium waves-effect waves-light blue"><i
+      class="material-icons">edit</i></a><span class="button-desc">Edit recipe</span>
+  </div>
+  <div class="edit" (click)="saveRecipe()" *ngIf="editForm">
+    <a class="btn-floating btn-medium waves-effect waves-light blue"><i
+      class="material-icons">save</i></a><span class="button-desc">Save recipe</span>
+  </div>
 </div>
+

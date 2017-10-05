@@ -10,7 +10,11 @@ export class IngredientService {
   constructor(private http: HttpClient) {
   }
 
-  loadIngedtients(id) {
+  loadAllIngredients() {
+    return this.http.get<Ingredients>(`${BASE_URL}/ingredients`);
+  }
+
+  loadIngredtients(id) {
     return this.http.get<Ingredients>(`${BASE_URL}/recipes/${id}/ingredients`);
   }
 

@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {Recipe} from '../../../services/recipes/recipe.model';
-import {Ingredients} from '../../../services/recipes/ingredients.model';
 import {Params, ActivatedRoute} from '@angular/router';
 import {RecipesService} from '../../../services/recipes/recipes.service';
 import {IngredientService} from '../../../services/recipes/ingredient.service';
@@ -13,24 +12,38 @@ import {IngredientService} from '../../../services/recipes/ingredient.service';
 export class RecipeDetailComponent implements OnInit {
 
   recipeDetail: Recipe;
-  toggle: boolean;
-  ingredients: Ingredients;
+  editForm = false;
+  ingredients: any;
 
   constructor(private route: ActivatedRoute,
               private recipeService: RecipesService,
               private ingredientService: IngredientService) {
-    this.toggle = true;
   }
 
   ngOnInit() {
     this.route.params.subscribe((params: Params) => {
       this.recipeService.loadRecipe(params['id']).subscribe(recipe => this.recipeDetail = recipe);
-      this.ingredientService.loadIngedtients(params['id']).subscribe(ingredients => this.ingredients = ingredients);
+      this.ingredientService.loadIngredtients(params['id']).subscribe(ingredients => this.ingredients = ingredients);
     });
   }
 
-  toggleAction() {
-    this.toggle = !this.toggle;
+  addIngredient(ingredient, id) {
+    this.ingredientService.createIngredients(id, ingredient).subscribe(() => {
+      console.log('Adding ingredients');
+    });
+    this.ingredients.push(ingredient);
+  }
+
+  editRecipe() {
+    this.editForm = true;
+  }
+
+  saveRecipe() {
+    console.log(this.recipeDetail);
+    this.recipeService.updateRecipe(this.recipeDetail).subscribe(() => {
+      console.log('Recipe updating');
+      this.editForm = false;
+    });
   }
 
 }

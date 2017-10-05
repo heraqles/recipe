@@ -18,7 +18,11 @@ import {ListComponent} from './components/lists/list/list.component';
 import {CapitalizeFirstPipe} from './pipes/capitalize.pipe';
 import {AddIngredientsComponent} from './components/recipes/add-ingredients/add-ingredients.component';
 import {SearchPipe} from './pipes/search.pipe';
+import {OrderByPipe} from './pipes/orderBy.pipe';
+import { Ng2TableModule } from 'ng2-table/ng2-table';
 import {SearchInputComponent} from './components/search-input/search-input.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { TableNavigationComponent } from './components/table-navigation/table-navigation.component';
 
 @NgModule({
   declarations: [
@@ -32,12 +36,16 @@ import {SearchInputComponent} from './components/search-input/search-input.compo
     ListComponent,
     CapitalizeFirstPipe,
     SearchPipe,
+    OrderByPipe,
     AddIngredientsComponent,
-    SearchInputComponent
+    SearchInputComponent,
+    LandingPageComponent,
+    TableNavigationComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    Ng2TableModule,
     HttpClientModule,
     router
   ],

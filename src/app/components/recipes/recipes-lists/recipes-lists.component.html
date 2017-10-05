@@ -2,9 +2,8 @@
                   (addText)="filterList($event)"
 ></app-search-input>
 <div class="list-item" *ngFor="let recipe of recipes | filter: term; index as i ">
-  <a class="list-nav" routerLink="/details/{{recipe.id}}" routerLinkActive="active">
+  <a class="list-nav" routerLink="/recipes/details/{{recipe.id}}" routerLinkActive="active">
   <div class="valign-wrapper item">
-       <!--(click)="selected.emit(recipe);">-->
     <span class="number">{{i+1}}</span>
     <span class="black-text recipes-title">
             {{recipe.name}}
@@ -18,3 +17,4 @@
   <a class="btn-floating btn-medium waves-effect waves-light blue" [routerLink]="'/new-recipe'"><i
     class="material-icons">add</i></a>
 </div>
+
