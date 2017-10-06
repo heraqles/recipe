@@ -1,4 +1,5 @@
 .item {
+  position: relative;
   padding: 20px 10px;
   display: flex;
   justify-content: space-between;
@@ -55,4 +56,11 @@
   &.active {
     background: #eee;
   }
+}
+
+.delete-item{
+  position: absolute;
+  right: 10px;
+  margin-top: -45px;
+  cursor: pointer;
 }

@@ -1,8 +1,9 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Output, EventEmitter} from '@angular/core';
 import {Recipe} from '../../../services/recipes/recipe.model';
 import {Params, ActivatedRoute} from '@angular/router';
 import {RecipesService} from '../../../services/recipes/recipes.service';
 import {IngredientService} from '../../../services/recipes/ingredient.service';
+import {DataService} from '../../../services/recipes/recipe-list.data.service';
 
 @Component({
   selector: 'app-recipe-detail',
@@ -17,7 +18,8 @@ export class RecipeDetailComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
               private recipeService: RecipesService,
-              private ingredientService: IngredientService) {
+              private ingredientService: IngredientService,
+              private dataService: DataService) {
   }
 
   ngOnInit() {
@@ -39,8 +41,8 @@ export class RecipeDetailComponent implements OnInit {
   }
 
   saveRecipe() {
-    console.log(this.recipeDetail);
     this.recipeService.updateRecipe(this.recipeDetail).subscribe(() => {
+      this.dataService.updateList(this.recipeDetail);
       console.log('Recipe updating');
       this.editForm = false;
     });

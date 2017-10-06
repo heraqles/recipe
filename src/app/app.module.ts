@@ -23,7 +23,7 @@ import { Ng2TableModule } from 'ng2-table/ng2-table';
 import {SearchInputComponent} from './components/search-input/search-input.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { TableNavigationComponent } from './components/table-navigation/table-navigation.component';
-
+import { DataService } from './services/recipes/recipe-list.data.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,6 +51,7 @@ import { TableNavigationComponent } from './components/table-navigation/table-na
   ],
   providers: [RecipesService,
     ListsService,
+    DataService,
     IngredientService
   ],
   bootstrap: [AppComponent]

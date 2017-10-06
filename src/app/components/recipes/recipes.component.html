@@ -4,9 +4,7 @@
 
       <div class="card-panel recipe-lists grey lighten-5 z-depth-1">
 
-        <app-recpies-lists [recipes]="recipes"
-                           (selected)="selectRecipe($event)"
-                           (deleted)="deleteRecipe($event)">
+        <app-recpies-lists (deleted)="deleteRecipe($event)">
         </app-recpies-lists>
 
       </div>

@@ -30,7 +30,7 @@
     },
     {
       "id": 3,
-      "name": "Carmel Brownie pie 2",
+      "name": "Carmel Brownie pie ",
       "big_amount": true,
       "favourite": true,
       "ingredient": [
@@ -40,112 +40,17 @@
       ]
     },
     {
-      "id": 4,
-      "name": "Pancakes",
-      "big_amount": false,
-      "favourite": false,
-      "ingredient": [
-        {
-          "name": "salt"
-        },
-        {
-          "name": "mashrooms"
-        },
-        {
-          "name": "tomato"
-        },
-        {
-          "name": "onion"
-        },
-        {
-          "name": "water"
-        }
-      ]
+      "id": 443,
+      "name": "Hot dog ",
+      "favourite": true
     },
     {
-      "id": 583,
-      "name": "Chicken salate 2",
-      "big_amount": false,
-      "favourite": true,
-      "ingredient": [
-        {
-          "name": "salt"
-        },
-        {
-          "name": "mashrooms"
-        },
-        {
-          "name": "tomato"
-        }
-      ]
-    },
-    {
-      "id": 740,
-      "name": "Test",
-      "big_amount": true,
-      "favourite": false,
-      "ingredient": [
-        {
-          "name": "salt"
-        },
-        {
-          "name": "sugar"
-        },
-        {
-          "name": "potato"
-        }
-      ]
+      "id": 274,
+      "name": "Meet with potato",
+      "favourite": true
     }
   ],
   "ingredients": [
-    {
-      "id": "2",
-      "recipeId": "583",
-      "name": "salt",
-      "amount": "300",
-      "unit": "ml",
-      "cookingMethod": "baking"
-    },
-    {
-      "id": "3",
-      "recipeId": "583",
-      "name": "mashrooms",
-      "amount": "150",
-      "unit": "ml",
-      "cookingMethod": "boiling"
-    },
-    {
-      "id": "4",
-      "recipeId": "4",
-      "name": "sugar",
-      "amount": "100",
-      "unit": "g",
-      "cookingMethod": "boiling"
-    },
-    {
-      "id": "5",
-      "recipeId": "4",
-      "name": "milk",
-      "amount": "250",
-      "unit": "ml",
-      "cookingMethod": "grill"
-    },
-    {
-      "id": "6",
-      "recipeId": "740",
-      "name": "sugar",
-      "amount": "150",
-      "unit": "ml",
-      "cookingMethod": "grill"
-    },
-    {
-      "id": "7",
-      "recipeId": "740",
-      "name": "milk",
-      "amount": "50",
-      "unit": "ml",
-      "cookingMethod": "baking"
-    },
     {
       "id": "8",
       "recipeId": "1",
@@ -195,28 +100,20 @@
       "cookingMethod": "searing"
     },
     {
-      "name": "milk",
-      "amount": "25",
-      "unit": "ml",
-      "cookingMethod": "gill 2",
-      "recipeId": "4",
-      "id": "r1wFCYQ2Z"
-    },
-    {
-      "name": "salt",
-      "unit": "ml",
-      "amount": "50",
-      "cookingMethod": "grill",
-      "recipeId": "583",
-      "id": "rkcuOcXhW"
-    },
-    {
-      "name": "salt",
-      "amount": "400",
+      "name": "mashrooms",
+      "amount": "100",
       "unit": "g",
-      "cookingMethod": "pan-fry",
-      "recipeId": "4",
-      "id": "rJ4bTiX3W"
+      "cookingMethod": "grill",
+      "recipeId": "443",
+      "id": "ry4gqA4h-"
+    },
+    {
+      "name": "onion",
+      "amount": "100",
+      "unit": "ml",
+      "cookingMethod": "baking",
+      "recipeId": "274",
+      "id": "B11yFkShW"
     }
   ],
   "ingredient-list": [

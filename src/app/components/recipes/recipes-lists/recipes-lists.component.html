@@ -3,14 +3,16 @@
 ></app-search-input>
 <div class="list-item" *ngFor="let recipe of recipes | filter: term; index as i ">
   <a class="list-nav" routerLink="/recipes/details/{{recipe.id}}" routerLinkActive="active">
-  <div class="valign-wrapper item">
-    <span class="number">{{i+1}}</span>
-    <span class="black-text recipes-title">
+    <div class="valign-wrapper item">
+      <span class="number">{{i+1}}</span>
+      <span class="black-text recipes-title">
             {{recipe.name}}
           </span>
-    <i class="material-icons icon" (click)="deleted.emit(recipe)">highlight_off</i>
-  </div>
+    </div>
   </a>
+  <div class="delete-item">
+    <i class="material-icons icon" (click)="deleted.emit(recipe); updateList(recipe)">highlight_off</i>
+  </div>
   <div class="divider"></div>
 </div>
 <div class="add">
